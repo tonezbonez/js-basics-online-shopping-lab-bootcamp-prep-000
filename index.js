@@ -69,5 +69,10 @@ return cart
 
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if (Number.isInteger(cardNumber)===true){
+    var totalCost = total()
+    console.log(`Your total cost is $${totalCost}, which will be charged to the card ${cardNumber}.`)
+  }else{
+    console.log("Sorry, we don't have a credit card on file for you.")
+  }
 }
